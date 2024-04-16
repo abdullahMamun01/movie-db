@@ -1,7 +1,14 @@
-import { Inter } from "next/font/google";
+import { Sora } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const sora = Sora({ 
+  subsets: ["latin"],
+  weight :['300','400','500','600','700'],
+  style:'normal',
+  display: 'swap',
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -9,9 +16,15 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className="dark">
+      <body className={`dark:bg-body bg-white font-[Sora] dark:text-white text-dark ${sora.className}`}>
+        <Header />
+        {children}
+          <div id="modal-root"></div>
+        <Footer />
+      </body>
     </html>
   );
 }
