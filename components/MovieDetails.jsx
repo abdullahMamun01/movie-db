@@ -4,9 +4,9 @@ import { getDictionary } from '@/app/[lang]/dictionary/dictionaries'
 export default async function MovieDetails({ movie ,lang}) {
   const language  = await getDictionary(lang)
   return (
-    <section>
-      <div>
-        <Image className="w-full object-cover max-h-[300px] lg:max-h-[500px]"
+    <section className=''>
+      <div className=''>
+        <Image className="w-full object-cover max-h-[300px] "
           src={movie?.backdrop_path} alt={movie?.title}
           width={0} height={0} sizes='90vw'
         />

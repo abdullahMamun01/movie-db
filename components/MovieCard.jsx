@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link'
 import { usePathname } from 'next/navigation';
 const MovieCard = ({movie}) => {
-    const pathName  = usePathname()
+
     const {id,title,genre_ids,poster_path} = movie
     const stars = 4
     const href = '/'

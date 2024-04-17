@@ -22,7 +22,7 @@ export default function Modal({ children }) {
 
     return createPortal(
        
-            <dialog className='w-[70%]  shadow-teal-700 shadow-md border border-teal-600 flex flex-col p-2 rounded-md dark:bg-black dark:bg-opacity-95 dark:text-gray-100'
+            <dialog className='w-[70%] shadow-teal-700 shadow-md border border-teal-600 flex flex-col p-2 rounded-md dark:bg-black/80 dark:bg-opacity-95 dark:text-gray-100'
                 ref={modalRef}
                 onClose={handleClose}
 
